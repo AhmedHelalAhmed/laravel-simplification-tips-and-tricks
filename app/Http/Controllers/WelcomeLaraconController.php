@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class WelcomeController
+class WelcomeLaraconController
 {
     // if you need and trait from Controller
     // you casn use this here like
