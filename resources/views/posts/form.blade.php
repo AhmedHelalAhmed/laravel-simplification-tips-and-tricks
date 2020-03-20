@@ -1,10 +1,6 @@
 @csrf
 <div class="form-group">
-    <label for="title">Title</label>
-    <input value="{{ old('title',$post->title) }}" name="title" type="text" class="form-control" id="title">
-    @error('title')
-    <p>{{ $errors->first('title') }}</p>
-    @enderror
+   <x-input-field :model="$post" name="title"/>
 </div>
 <div class="form-group">
     <label for="text">Text</label>
