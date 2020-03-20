@@ -9,7 +9,11 @@
                 <h5 class="card-title">{{$post->title}}</h5>
                 <p class="card-text">{{$post->text}}</p>
                 <a class="btn btn-warning" href="{{ route('posts.edit',$post->id) }}">Edit</a>
-
+                <form method="post" action="{{ route('posts.destroy',$post->id) }}" style="display: inline">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
             </div>
         </div>
     @empty
