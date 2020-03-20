@@ -17,9 +17,7 @@
     <label for="category_id">Category</label>
     <select name="category_id" class="form-control" id="category_id">
         @foreach($categories as $category)
-            <option
-                @if($isSelected($category)) selected @endif
-            value="{{$category->id}}">{{$category->name}}</option>
+            <option {{ $isSelected($category) }} value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
     </select>
     @error('category_id')

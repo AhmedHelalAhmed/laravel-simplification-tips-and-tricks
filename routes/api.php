@@ -25,7 +25,7 @@ Route::get('/test', function (Request $request) {
 
 //    $data=collect(new PostViewModel());
 //    dd($data['isSelected'](\App\Category::find(1)));
-    
+
 
     return new PostViewModel();
 });
