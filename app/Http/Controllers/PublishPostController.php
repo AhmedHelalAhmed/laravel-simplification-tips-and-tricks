@@ -13,7 +13,6 @@ class PublishPostController extends Controller
 
     public function __construct(PublishPostAction $publishPostAction)
     {
-
         $this->publishPostAction = $publishPostAction;
     }
 

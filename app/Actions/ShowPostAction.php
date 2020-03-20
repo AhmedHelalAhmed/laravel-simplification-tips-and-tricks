@@ -3,7 +3,6 @@
 
 namespace App\Actions;
 
-
 use App\Post;
 
 class ShowPostAction

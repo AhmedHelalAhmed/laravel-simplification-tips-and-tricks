@@ -36,7 +36,7 @@ class PublishPostCommand extends Command
      * @param PublishPostAction $publishPostAction
      * @param ShowPostAction $showPostAction
      */
-    public function __construct(PublishPostAction $publishPostAction,ShowPostAction $showPostAction)
+    public function __construct(PublishPostAction $publishPostAction, ShowPostAction $showPostAction)
     {
         parent::__construct();
         $this->publishPostAction = $publishPostAction;
@@ -52,6 +52,5 @@ class PublishPostCommand extends Command
     {
         $post=$this->showPostAction->execute($this->argument('postId'));
         $this->publishPostAction->execute($post);
-
     }
 }

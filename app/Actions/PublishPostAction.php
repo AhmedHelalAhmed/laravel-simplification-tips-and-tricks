@@ -1,5 +1,6 @@
 <?php
 namespace App\Actions;
+
 use App\Post;
 
 /**
