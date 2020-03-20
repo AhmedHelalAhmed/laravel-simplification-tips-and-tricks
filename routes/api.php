@@ -21,5 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/test', function (Request $request) {
     // it can support api
+
+
+//    $data=collect(new PostViewModel());
+//    dd($data['isSelected'](\App\Category::find(1)));
+    
+
     return new PostViewModel();
 });

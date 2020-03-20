@@ -18,7 +18,7 @@
     <select name="category_id" class="form-control" id="category_id">
         @foreach($categories as $category)
             <option
-                @if(old('category_id',$post->category_id)==$category->id) selected @endif
+                @if($isSelected($category)) selected @endif
             value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
     </select>
