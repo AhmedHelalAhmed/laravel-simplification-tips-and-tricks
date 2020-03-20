@@ -33,6 +33,8 @@ class PostController
 
     public function edit(Post $post)
     {
+        // the PostViewModel called before render the view
+        // and after finish the controller logic
         return view('posts.edit', new PostViewModel($post));
     }
 
