@@ -11,16 +11,30 @@ class PostViewModel extends ViewModel
     /**
      * @var Post
      */
-    public $post;
-    /**
-     * @var Category[]|\Illuminate\Database\Eloquent\Collection
-     */
-    public $categories;
+    protected $post;
 
+    /**
+     * PostViewModel constructor.
+     * @param Post|null $post
+     */
     public function __construct(Post $post=null)
     {
-
         $this->post = $post ?? new Post();
-        $this->categories=Category::all();
+    }
+
+    /**
+     * @return Category[]|Collection
+     */
+    public function categories()
+    {
+        return Category::all();
+    }
+
+    /**
+     * @return Post|null
+     */
+    public function post()
+    {
+        return $this->post;
     }
 }
