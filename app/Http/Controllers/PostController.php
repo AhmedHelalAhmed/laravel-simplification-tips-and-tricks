@@ -9,6 +9,7 @@ use App\Category;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Post;
+use App\ViewModels\PostViewModel;
 
 class PostController
 {
@@ -21,9 +22,7 @@ class PostController
 
     public function create()
     {
-        $data['post']=new Post();
-        $data['categories']=Category::all();
-        return view('posts.create', compact('data'));
+        return view('posts.create', new PostViewModel());
     }
 
     public function store(StorePostRequest $request, StorePostAction $storePostAction)
@@ -34,9 +33,7 @@ class PostController
 
     public function edit(Post $post)
     {
-        $data['post']=$post;
-        $data['categories']=Category::all();
-        return view('posts.edit', compact('data'));
+        return view('posts.edit', new PostViewModel($post));
     }
 
     public function update(UpdatePostRequest $request, Post $post, UpdatePostAction $updatePostAction)

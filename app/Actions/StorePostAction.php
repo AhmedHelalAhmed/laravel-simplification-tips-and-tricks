@@ -11,7 +11,7 @@ class StorePostAction
     {
         $post->title = $data['title'];
         $post->text = $data['text'];
-        $post->categort_id = $data['category_id'];
+        $post->category_id = $data['category_id'];
         $post->save();
         return $post;
     }
