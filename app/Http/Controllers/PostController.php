@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Actions\DestroyPostAction;
 use App\Actions\StorePostAction;
 use App\Actions\UpdatePostAction;
-use App\Category;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Post;
