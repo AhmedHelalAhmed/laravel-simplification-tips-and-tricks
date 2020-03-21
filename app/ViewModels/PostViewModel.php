@@ -53,8 +53,5 @@ class PostViewModel extends ViewModel
         return $this->post;
     }
 
-    public function isSelected(Category $category): string
-    {
-        return old('category_id', $this->post->category_id) == $category->id ? 'selected':'';
-    }
+
 }
