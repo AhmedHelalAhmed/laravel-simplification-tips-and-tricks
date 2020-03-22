@@ -19,7 +19,6 @@ class PostViewModel extends ViewModel
      */
     public function __construct(Post $post = null)
     {
-//        dump('in PostViewModel constructor');
 
         $this->post = $post ?? new Post();
     }
@@ -29,27 +28,14 @@ class PostViewModel extends ViewModel
      */
     public function categories()
     {
-//        dump('in categories');
         return Category::all();
     }
-
-//    public function method1()
-//    {
-//        dump('method1');
-//    }
-//    public function method2()
-//    {
-//        dump('method2');
-//    }
-
 
     /**
      * @return Post|null
      */
     public function post()
     {
-//        dump('in post method');
-
         return $this->post;
     }
 

@@ -1,18 +1,25 @@
 <?php
-
-
 namespace App\Actions;
 
-use App\Post;
-
+/**
+ * Class StorePostAction
+ * @package App\Actions
+ */
 class StorePostAction
 {
-    public function execute($post, $data)
+    private $output;
+
+    /**
+     * @param $input
+     * @return mixed
+     */
+    public function execute($input)
     {
-        $post->title = $data['title'];
-        $post->text = $data['text'];
-        $post->category_id = $data['category_id'];
-        $post->save();
-        return $post;
+        $this->output['post']= $input['post'];
+        $this->output['post']->title = $input['title'];
+        $this->output['post']->text = $input['text'];
+        $this->output['post']->category_id = $input['category_id'];
+        $this->output['post']->save();
+        return  $this->output['post'];
     }
 }

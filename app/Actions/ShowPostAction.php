@@ -1,10 +1,12 @@
 <?php
-
-
 namespace App\Actions;
 
 use App\Post;
 
+/**
+ * Class ShowPostAction
+ * @package App\Actions
+ */
 class ShowPostAction
 {
     /**
